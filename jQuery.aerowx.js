@@ -52,24 +52,7 @@
 				console.log(textStatus); //error logging
 			}
 		  });
-	  function parseXML(xml){
-	  		$(xml).find('METAR').each(function(){
-	  			var time = $(this).find('observation_time').text();
-	  			$('<div/>').appendTo(this).text(time);
-	  			// Aerowx plugin code here
-				$('<div class="station"/>')
-				.appendTo(this)
-				.hide()
-				.text(settings.station)
-				.css({
-					backgroundColor:'#fefefe',
-					border: '1px solid #ccc',
-					'border-radius': 8,
-					height:200,
-					width:150
-				})
-				.fadeIn(450);
-			});
+
 	  }
 		
     });
