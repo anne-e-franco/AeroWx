@@ -47,9 +47,12 @@
 				$("<li></li>").html("Visibility: " + visibility).appendTo('#'+settings.station);
   			
   			// Sky Condition
-	  			var skyCondition = $(xml).find('sky_condition').attr('sky_cover');
-	  			var cloudBase = $(xml).find('sky_condition').attr('cloud_base_ft_agl');
+	  		$(xml).find('sky_condition').each(function(){
+	  			var item = $(this); 
+	  			var skyCondition = $(this).attr('sky_cover');
+	  			var cloudBase = $(this).attr('cloud_base_ft_agl');
 				$("<li></li>").html("Sky Condition: " + skyCondition + " at " + cloudBase + " ft AGL").appendTo('#'+settings.station);
+				});
 //	  			})
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
