@@ -21,3 +21,6 @@ Wind 'compass' with a needle indicating wind direction and speed.
 
 Data Sources:
 ADDS textual data service http://weather.aero/tools/dataservices/textdataserver
+
+Added for the benefit of demonstration
+Once again
